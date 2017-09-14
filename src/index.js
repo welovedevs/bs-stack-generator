@@ -10,14 +10,14 @@ const styles = {
 };
 
 const alphabetLookup = {
-  a: ["AWS", "Angular", "Ada", "ASP.net", "Angular 1.6", "Arduino", "Android"],
-  b: ["Basic", "bash", "Brainfuck"],
-  c: ["CleverCloud", "C#", "C++", "Clojure", "Coq", "Cobol"],
+  a: ["AWS", "Angular", "Ada", "ASP.net", "Angular 1.6", "Arduino", "Android", "Algolia"],
+  b: ["Bootstrap","Basic", "bash", "Brainfuck"],
+  c: ["CleverCloud", "C#", "C++", "Clojure", "Coq", "Cobol", "CSS3"],
   d: ["Dart", "Delphi"],
-  e: ["Elixir", "Express", "Eiffel", "Erlang", "Ecmascript"],
+  e: ["Elixir", "Express", "Eiffel", "Erlang", "Ecmascript", "ElasticSearch"],
   f: ["Falcon", "Flow", "Firebase", "Fortran"],
   g: ["Guava", "Go", "Groovy"],
-  h: ["Haskell", "Haxe", "Heroku"],
+  h: ["Haskell", "Haxe", "Heroku", "HTML5"],
   i: ["IBM", "Idris", "Io", "Interlisp", "iOS"],
   j: ["Java", "JEE"],
   k: ["Kotlin"],
@@ -28,7 +28,7 @@ const alphabetLookup = {
   p: ["Phoenix", "PHP", "Perl", "Python", "Postgresql"],
   q: ["QML", "Quasar"],
   r: ["Rust", "Ruby", "React"],
-  s: ["Scala", "SmallTalk", "Swift"],
+  s: ["Scala", "SmallTalk", "Swift", "Serverless", "Sendgrid", "Stripe"],
   t: ["TypeScript"],
   u: ["Ubuntu", "UnrealScript"],
   v: ["VHDL", "VBA"],
