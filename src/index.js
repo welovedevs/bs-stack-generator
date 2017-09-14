@@ -54,7 +54,7 @@ const Generator = ({ value }) => {
       return (accumulator += value[countLookup[value] % value.length] + " ");
     }, "");
 
-  return <div>{result}</div>;
+  return <h1>{result}</h1>;
 };
 
 class HOC extends Component {
