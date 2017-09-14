@@ -10,7 +10,7 @@ const styles = {
 };
 
 const alphabetLookup = {
-  a: ["AWS", "Ada", "ASP.net", "Arduino", "Android"],
+  a: ["AWS", "Angular", "Ada", "ASP.net", "Angular 1.6", "Arduino", "Android"],
   b: ["Basic", "bash", "Brainfuck"],
   c: ["CleverCloud", "C#", "C++", "Clojure", "Coq", "Cobol"],
   d: ["Dart", "Delphi"],
