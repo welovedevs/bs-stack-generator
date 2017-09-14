@@ -22,7 +22,7 @@ const alphabetLookup = {
   j: ["Java", "JEE"],
   k: ["Kotlin"],
   l: ["Lisp", "Logo", "Lua"],
-  m: ["Mongo", "Miranda", "MySql", "Matlab"],
+  m: ["Mongo","Maven", "Miranda", "MySql", "Matlab"],
   n: ["Nim", "Node"],
   o: ["Ocaml", "Objective-C", "Ocsigen"],
   p: ["Phoenix", "PHP", "Perl", "Python", "Postgresql"],
