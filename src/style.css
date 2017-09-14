@@ -1,0 +1,41 @@
+body {
+  /* Dimensions */
+  min-height:       100vh;
+
+  /* Flex */
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  justify-content:  center;
+
+  /* Colors */
+  color:            #FFF;
+  background-color: #333;
+
+  /* Font details */
+  text-align:       center;
+  font-family:      "Trebuchet MS";
+}
+
+input.name-input {
+  /* Dimensions */
+  min-width:      20em;
+  max-width:      100%;
+
+  /* Margins */
+  margin:         1em 0;
+  padding:        0.5em;
+  box-sizing:     border-box;
+
+  /* Borders */
+  border-radius:  2px;
+  border:         1px solid #CCC;
+
+  /* Colors */
+  color:          #333;
+
+  /* Font details */
+  font-size:      1em;
+  font-family:    "Trebuchet MS";
+  font-weight:    bold;
+}
