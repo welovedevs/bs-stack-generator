@@ -7,7 +7,7 @@ import {
 	Switch,
 	Redirect
 } from 'react-router-dom'
-
+import ShareBar from './share.js'
 import "./style.css";
 
 const styles = {
@@ -99,20 +99,30 @@ class HOC extends Component {
 
 const App = () => (
 	<Router>
-		  <div style={styles}>
-		    <Hello name="Stackronym" />
-		    <h2>Bullshit Stack Generator {"\u2728"}</h2>
-		    <p>{"Give an acronym, I give you a stack"}</p>
-				<Switch>
-					<Route
-						path="/:entry"
-						component={HOC}
-						/>
-					<Route
-						component={HOC}
-						/>
-				</Switch>
-		  </div>
+			<div>
+				<div style={styles}>
+			    <Hello name="Stackronym" />
+			    <h2>Bullshit Stack Generator {"\u2728"}</h2>
+			    <p>{"Give an acronym, I give you a stack"}</p>
+					<Switch>
+						<Route
+							path="/:entry"
+							component={HOC}
+							/>
+						<Route
+							component={HOC}
+							/>
+					</Switch>
+			  </div>
+
+				<h3 style={{marginTop:"100px"}}>Share your Stack : </h3>
+				<Route
+					path="/:value"
+					component={ShareBar}
+					/>
+
+				<div style={{fontColor: "white", marginTop:"100px"}}>Made with ❤️ in Lille with awesome people from LilleFP [<a href="https://lillefp.slack.com">Slack</a>|<a href="https://www.meetup.com/fr-FR/Lille-FP/">Meetup</a>]</div>
+			</div>
 	</Router>
 )
 
