@@ -15,6 +15,8 @@ const styles = {
   textAlign: "center"
 };
 
+const removeHash = (hash) => hash.slice(1, hash.length)
+
 const alphabetLookup = {
   a: ["AWS", "Angular", "Ada", "ASP.net", "Angular 1.6", "Arduino", "Android", "Algolia"],
   b: ["Bootstrap","Basic", "bash", "Brainfuck"],
@@ -70,7 +72,7 @@ const Generator = ({ value }) => {
 class HOC extends Component {
   constructor(props) {
     super(props);
-    this.state = { input: props.match.params.entry ||  "" };
+    this.state = { input: removeHash(props.location.hash) ||  "" };
 
     this.handleChange = this.handleChange.bind(this);
   }
@@ -106,10 +108,6 @@ const App = () => (
 			    <p>{"Give an acronym, I give you a stack"}</p>
 					<Switch>
 						<Route
-							path="/#:entry"
-							component={HOC}
-							/>
-						<Route
 							component={HOC}
 							/>
 					</Switch>
@@ -117,7 +115,6 @@ const App = () => (
 
 				<h3 style={{marginTop:"100px"}}>Share your Stack : </h3>
 				<Route
-					path="/#:value"
 					component={ShareBar}
 					/>
 

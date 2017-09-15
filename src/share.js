@@ -46,10 +46,12 @@ const EmailIcon = generateShareIcon('email');
 const shareUrlBase = 'http://stackronym.welovedevs.com';
 const title = 'Stackronym - my stack is ';
 
-const ShareBarContainer = ({location, match}) => (
+const removeHash = (hash) => hash.slice(1, hash.length)
+
+const ShareBarContainer = ({location}) => (
 	<ShareBar
 		shareUrl={shareUrlBase + location.pathname}
-		title={title + match.params.value.toUpperCase()}
+		title={title + removeHash(location.hash).toUpperCase()}
 		urlForCounter={shareUrlBase}
 		/>
 )
