@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import Hello from "./Hello";
+import {
+  BrowserRouter as Router,
+  Route,
+	Switch,
+	Redirect
+} from 'react-router-dom'
 
 import "./style.css";
 
@@ -54,13 +60,17 @@ const Generator = ({ value }) => {
       return (accumulator += value[countLookup[value] % value.length] + " ");
     }, "");
 
-  return <h1>{result}</h1>;
+  return (
+		<div>
+			<h1>{result}</h1>
+			<Redirect to={"/" + value} />
+	  </div>);
 };
 
 class HOC extends Component {
   constructor(props) {
     super(props);
-    this.state = { input: "" };
+    this.state = { input: props.match.params.entry ||  "" };
 
     this.handleChange = this.handleChange.bind(this);
   }
@@ -68,6 +78,7 @@ class HOC extends Component {
   handleChange(event) {
     event.preventDefault();
     this.setState({ input: event.target.value });
+		this.props.location.pathname = `\${event.target.value}`
   }
 
   render() {
@@ -85,14 +96,25 @@ class HOC extends Component {
   }
 }
 
+
 const App = () => (
-  <div style={styles}>
-    <Hello name="Stackronym" />
-    <h2>Bullshit Stack Generator {"\u2728"}</h2>
-    <p>{"Give an acronym, I give you a stack"}</p>
-    <HOC />
-  </div>
-);
+	<Router>
+		  <div style={styles}>
+		    <Hello name="Stackronym" />
+		    <h2>Bullshit Stack Generator {"\u2728"}</h2>
+		    <p>{"Give an acronym, I give you a stack"}</p>
+				<Switch>
+					<Route
+						path="/:entry"
+						component={HOC}
+						/>
+					<Route
+						component={HOC}
+						/>
+				</Switch>
+		  </div>
+	</Router>
+)
 
 render(<App />, document.getElementById("root"));
 
