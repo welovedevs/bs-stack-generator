@@ -50,7 +50,7 @@ const removeHash = (hash) => hash.slice(1, hash.length)
 
 const ShareBarContainer = ({location}) => (
 	<ShareBar
-		shareUrl={shareUrlBase + location.pathname}
+		shareUrl={shareUrlBase + location.hash}
 		title={title + removeHash(location.hash).toUpperCase()}
 		urlForCounter={shareUrlBase}
 		/>
