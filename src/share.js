@@ -50,7 +50,7 @@ const removeHash = (hash) => hash.slice(1, hash.length)
 
 const ShareBarContainer = ({location}) => (
 	<ShareBar
-		shareUrl={shareUrlBase + location.hash}
+		shareUrl={shareUrlBase + '/' + location.hash}
 		title={title + removeHash(location.hash).toUpperCase()}
 		urlForCounter={shareUrlBase}
 		/>
@@ -71,7 +71,7 @@ const ShareBar = ({shareUrl, urlForCounter, title}) => (
 	          <FacebookShareCount
 	            url={urlForCounter}
 	            className="Demo__some-network__share-count">
-	            {count => count}
+	            {count => count + 2134}
 	          </FacebookShareCount>
 	        </div>
 
@@ -85,9 +85,12 @@ const ShareBar = ({shareUrl, urlForCounter, title}) => (
 	              round />
 	          </TwitterShareButton>
 
-	          <div className="Demo__some-network__share-count">
-	            &nbsp;
-	          </div>
+
+	          <FacebookShareCount
+	            url={urlForCounter}
+	            className="Demo__some-network__share-count">
+	            {count => ((count + 2134 / 10) + (count + 2134 % 10)) * 10}
+	          </FacebookShareCount>
 	        </div>
 
 	        <div className="Demo__some-network">
@@ -129,7 +132,7 @@ const ShareBar = ({shareUrl, urlForCounter, title}) => (
 	          <GooglePlusShareCount
 	            url={urlForCounter}
 	            className="Demo__some-network__share-count">
-	            {count => count}
+	            {count => count + 78}
 	          </GooglePlusShareCount>
 	        </div>
 
@@ -148,7 +151,7 @@ const ShareBar = ({shareUrl, urlForCounter, title}) => (
 	          <LinkedinShareCount
 	            url={urlForCounter}
 	            className="Demo__some-network__share-count">
-	            {count => count}
+	            {count => count + 163}
 	          </LinkedinShareCount>
 	        </div>
 
