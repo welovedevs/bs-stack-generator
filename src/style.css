@@ -17,6 +17,21 @@ body {
   font-family:      "Trebuchet MS";
 }
 
+a:link
+{
+    color:#FFFFFF;
+}
+
+a:visited
+{
+    color:#FFFFFF;
+}
+
+a:hover
+{
+    color:#FFFFFF;
+}
+
 input.name-input {
   /* Dimensions */
   min-width:      20em;
