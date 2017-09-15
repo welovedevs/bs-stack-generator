@@ -87,7 +87,7 @@ class HOC extends Component {
 
 const App = () => (
   <div style={styles}>
-    <Hello name="" />
+    <Hello name="Stackronym" />
     <h2>Bullshit Stack Generator {"\u2728"}</h2>
     <p>{"Give an acronym, I give you a stack"}</p>
     <HOC />
