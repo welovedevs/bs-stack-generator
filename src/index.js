@@ -63,7 +63,7 @@ const Generator = ({ value }) => {
   return (
 		<div>
 			<h1>{result}</h1>
-			<Redirect to={"/" + value} />
+			<Redirect to={"/#" + value} />
 	  </div>);
 };
 
@@ -106,7 +106,7 @@ const App = () => (
 			    <p>{"Give an acronym, I give you a stack"}</p>
 					<Switch>
 						<Route
-							path="/:entry"
+							path="/#:entry"
 							component={HOC}
 							/>
 						<Route
@@ -117,7 +117,7 @@ const App = () => (
 
 				<h3 style={{marginTop:"100px"}}>Share your Stack : </h3>
 				<Route
-					path="/:value"
+					path="/#:value"
 					component={ShareBar}
 					/>
 
