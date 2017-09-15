@@ -2,7 +2,7 @@
   "name": "bullshit-stack-generator",
   "description": "Add more BS to your life. Because it's Mongo Express Angular Node",
   "version": "0.0.67",
-  "homepage": "https://jechercheundev.github.io/bs-stack-generator/",
+  "homepage": "http://stackronym.welovedevs.com",
   "dependencies": {
     "react-dom": "15.5.3",
     "react": "15.5.3"
