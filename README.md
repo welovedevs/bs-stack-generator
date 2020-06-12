@@ -6,7 +6,7 @@ It started with a tweet : https://twitter.com/krisajenkins/status/90398876117182
 
 Then things went mad.
 
-PROD : https://jechercheundev.github.io/bs-stack-generator/
+PROD : https://stackronym.welovedevs.com/
 
 # PR Welcomed !
 
